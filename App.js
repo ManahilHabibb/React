@@ -4,16 +4,16 @@ import Mybutton from './components/buttons';
 
 export default function App() {
 
-  const Press = () =>{
-    alert('Button Pressed');
-  };
+  // const Press = () =>{
+  //   alert('Button Pressed');
+  // };
 
   return (
     <View style={styles.container}>
-      <Text>Touchable Opacity Button</Text>
+      <Text>UseState Button</Text>
       <Mybutton
       title="I am a button"
-      onPress={Press} />
+       />
       <StatusBar style="auto" />
     </View>
   );

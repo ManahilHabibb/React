@@ -1,19 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import Mybutton from './components/buttons';
+import Flexbox from './components/flex';
+
 
 export default function App() {
 
-  // const Press = () =>{
-  //   alert('Button Pressed');
-  // };
-
   return (
     <View style={styles.container}>
-      <Text>UseState Button</Text>
-      <Mybutton
-      title="I am a button"
-       />
+      
+      <Flexbox/>
       <StatusBar style="auto" />
     </View>
   );

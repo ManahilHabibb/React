@@ -1,14 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
-import Head from './components/header';
+import Foot from './components/footer';
 
 export default function App() {
 
   return (
+    
     <View style={styles.container}>
-   
+   <View style={styles.space}></View>
       <StatusBar style={styles.statusbar} />
-      <Head/>
+      <Foot/>
     </View>
   );
 }
@@ -23,5 +24,8 @@ const styles = StyleSheet.create({
   statusbar: {
     backgroundColor: 'blue',
     
+  },
+  space: {
+    height:680 ,
   }
 });

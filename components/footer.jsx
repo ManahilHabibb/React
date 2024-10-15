@@ -1,10 +1,10 @@
 import React from 'react';
 import {View,Text,StyleSheet} from 'react-native';
 
-const Head = ({}) =>{
+const Foot = ({}) =>{
 return(
     <View style={styles.container}>
-        <Text style={styles.mytext}>This is Header</Text>  
+        <Text style={styles.mytext}>This is Footer</Text>  
     </View>
 );
 };
@@ -14,11 +14,14 @@ container: {
     alignItems: 'center',
     backgroundColor: '#f5f5f5',
     padding: 25,
-    marginTop: 10,
+    position: 'absolute ',
+    width: '100%',
+    alignItems: 'center',
+    bottom: 0,
 },
 mytext: {
     fontSize: 20,
     fontWeight: 'bold'
 }
 });
-export default Head;
+export default Foot;

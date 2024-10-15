@@ -1,15 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import Flexbox from './components/flex';
-
+import { StyleSheet, View } from 'react-native';
+import Head from './components/header';
 
 export default function App() {
 
   return (
     <View style={styles.container}>
-      
-      <Flexbox/>
-      <StatusBar style="auto" />
+   
+      <StatusBar style={styles.statusbar} />
+      <Head/>
     </View>
   );
 }
@@ -18,7 +17,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  
+    
   },
+  statusbar: {
+    backgroundColor: 'blue',
+    
+  }
 });

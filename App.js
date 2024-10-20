@@ -1,14 +1,20 @@
+import React,{useState} from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import Mytext from './components/text';
+import { StyleSheet, Text, View , Switch} from 'react-native';
+ 
 
 export default function App() {
+  
+  const[enabled,setisenabled] = useState(false);
+  const toggleSwitch = ()=>setisenabled((previouState)=>!previouState);
+
+  
+
   return (
     <View style={styles.container}>
-      <Text>Text with placeholder</Text>
-      <Mytext
-      placeholder="Enter your name"/>
+      <Text>Toggle Switch</Text>
       <StatusBar style="auto" />
+      <Switch value={enabled} onValueChange={toggleSwitch}></Switch>
     </View>
   );
 }

@@ -1,22 +1,33 @@
-import React,{useState} from 'react';
-import { StatusBar } from 'expo-status-bar';
+
 import { StyleSheet, Text, View , Switch} from 'react-native';
- 
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+ import Myhome from './Screens/home'
+import Mydetail from './Screens/detail'
 
+const Stack=createStackNavigator();
 export default function App() {
-  
-  const[enabled,setisenabled] = useState(false);
-  const toggleSwitch = ()=>setisenabled((previouState)=>!previouState);
-
-  
-
   return (
-    <View style={styles.container}>
-      <Text>Toggle Switch</Text>
-      <StatusBar style="auto" />
-      <Switch value={enabled} onValueChange={toggleSwitch}></Switch>
-    </View>
+<NavigationContainer>
+    
+  <Stack.Navigator 
+    initialRouteName='home'>
+      
+      <Stack.Screen
+      name='home'
+      component={Myhome}>
+      </Stack.Screen>
+
+      <Stack.Screen
+      name='detail'
+      component={Mydetail}>
+      </Stack.Screen>
+    </Stack.Navigator>
+    
+    
+    </NavigationContainer>
   );
+  
 }
 
 const styles = StyleSheet.create({
